@@ -11,17 +11,19 @@ namespace PlayingCard.POCO
         public enum Suit {Club = 1, Diamond, Heart, Spade };
         //POCO has properties of the object and constructors.
 
-        public string CardNumber { get; set; }
+        public string CardName { get; set; }
         public Suit CardSuit { get; set; }
         public bool IsPlayed { get; set; }
+        public int CardValue { get; set; }
 
         public Card() { }
 
-        public Card(string cardNumber, Suit suit, bool isPlayed)
+        public Card(string cardNumber, Suit suit, bool isPlayed, int cardValue)
         {
-            CardNumber = cardNumber;
+            CardName = cardNumber;
             CardSuit = suit;
             IsPlayed = isPlayed;
+            CardValue = cardValue;
 
         }
     }

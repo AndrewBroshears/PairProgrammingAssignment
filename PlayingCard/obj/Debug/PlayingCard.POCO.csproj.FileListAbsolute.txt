@@ -1,0 +1,6 @@
+C:\ElevenFiftyProjects\CardGames\PlayingCard\bin\Debug\PlayingCard.dll
+C:\ElevenFiftyProjects\CardGames\PlayingCard\bin\Debug\PlayingCard.pdb
+C:\ElevenFiftyProjects\CardGames\PlayingCard\obj\Debug\PlayingCard.POCO.csproj.AssemblyReference.cache
+C:\ElevenFiftyProjects\CardGames\PlayingCard\obj\Debug\PlayingCard.POCO.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\CardGames\PlayingCard\obj\Debug\PlayingCard.dll
+C:\ElevenFiftyProjects\CardGames\PlayingCard\obj\Debug\PlayingCard.pdb

@@ -5,3 +5,8 @@ C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\CardGamesUI.csproj.Asse
 C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\CardGamesUI.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\BlackjackGame.exe
 C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\BlackjackGame.pdb
+C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\PlayCard.Repo.dll
+C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\PlayingCard.dll
+C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\PlayCard.Repo.pdb
+C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\PlayingCard.pdb
+C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\CardGamesUI.csproj.CopyComplete

@@ -1,0 +1,9 @@
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\bin\Debug\PlayCard.Repo.dll
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\bin\Debug\PlayCard.Repo.pdb
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\bin\Debug\PlayingCard.dll
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\bin\Debug\PlayingCard.pdb
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\obj\Debug\PlayCard.Repo.csproj.AssemblyReference.cache
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\obj\Debug\PlayCard.Repo.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\obj\Debug\PlayCard.Repo.csproj.CopyComplete
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\obj\Debug\PlayCard.Repo.dll
+C:\ElevenFiftyProjects\CardGames\PlayCard.Repo\obj\Debug\PlayCard.Repo.pdb

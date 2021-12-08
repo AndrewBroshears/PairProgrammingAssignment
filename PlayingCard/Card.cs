@@ -8,7 +8,7 @@ namespace PlayingCard.POCO
 {
     public class Card
     {   
-        public enum Suit {Club, Diamond, Heart, Spade };
+        public enum Suit {Club = 1, Diamond, Heart, Spade };
         //POCO has properties of the object and constructors.
 
         public string CardNumber { get; set; }

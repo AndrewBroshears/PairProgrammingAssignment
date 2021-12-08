@@ -51,5 +51,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayCard.Repo\PlayCard.Repo.csproj">
+      <Project>{2B9AECBA-02CD-4E1B-B051-A9A83721983F}</Project>
+      <Name>PlayCard.Repo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayingCard\PlayingCard.POCO.csproj">
+      <Project>{24534F4E-FD2F-47F6-BE9F-70C71E977C45}</Project>
+      <Name>PlayingCard.POCO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

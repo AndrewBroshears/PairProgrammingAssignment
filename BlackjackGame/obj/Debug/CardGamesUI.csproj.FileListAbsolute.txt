@@ -1,7 +1,0 @@
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\BlackjackGame.exe.config
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\BlackjackGame.exe
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\bin\Debug\BlackjackGame.pdb
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\CardGamesUI.csproj.AssemblyReference.cache
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\CardGamesUI.csproj.CoreCompileInputs.cache
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\BlackjackGame.exe
-C:\ElevenFiftyProjects\CardGames\BlackjackGame\obj\Debug\BlackjackGame.pdb

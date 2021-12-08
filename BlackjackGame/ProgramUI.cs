@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlayCard.Repo;
+using PlayingCard.POCO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,7 @@ namespace CardGamesUI
     {
 
         private bool runApplication = true;
-       
+        private readonly CardRepo cardRepo = new CardRepo();
         public void Run()
         {
             while (runApplication)
@@ -44,10 +46,22 @@ namespace CardGamesUI
 
         public void PlayBlackJack()
         {
+            List<Card> playerHand = new List<Card>();
+            List<Card> dealerHand = new List<Card>();
+            cardRepo.MakeDeckOfCards();
             Console.WriteLine("We're going to play the game here. \n" +
                 "Press any key to deal the hands.");
             Console.ReadKey();
+            cardRepo.PrintDeck();
+            Console.ReadLine();
 
+            //initialize players hands:
+            // playerHand.Add(CardRepo.DealCard());
+
+            
+
+            //List<Card>
+            // deal hands - vars: dealerHand, playerHand
         }
     }
 }

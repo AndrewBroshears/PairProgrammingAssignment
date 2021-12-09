@@ -45,8 +45,10 @@ namespace CardGamesUI
 
         public void PlayBlackJack()
         {
+            Console.Clear();
             List<Card> playerHand = new List<Card>();
             List<Card> dealerHand = new List<Card>();
+            string isWinner;
             cardRepo.MakeDeckOfCards();
             Console.WriteLine("We're going to play the game here. \n" +
                 "Press any key to deal the hands.");
@@ -67,7 +69,6 @@ namespace CardGamesUI
             Console.WriteLine("Dealer Hand:");
             cardRepo.DisplayHand(dealerHand);
             Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
-            Console.ReadKey();
             
             if (cardRepo.GetTotalPoints(playerHand) == 21 && cardRepo.GetTotalPoints(dealerHand) == 21)
             {
@@ -83,37 +84,81 @@ namespace CardGamesUI
             }
             else //nobody hit 21 on first draw
             {
-                Console.WriteLine("Would you like to hit? y/n");
-                string userInput = Console.ReadLine().ToLower();
-
-                //Hit 
-                if (userInput == "y") 
+                bool keepPlaying = true;
+                while (cardRepo.GetTotalPoints(playerHand) < 21 && keepPlaying)
                 {
-                    playerHand.Add(cardRepo.GetRandomCard());
-                    Console.WriteLine("Player Hand:");
-                    cardRepo.DisplayHand(playerHand);
-                    Console.WriteLine("Player Total Points: " + cardRepo.GetTotalPoints(playerHand));
-                }
-                if (cardRepo.GetTotalPoints(dealerHand) < 17)
-                {
-                    dealerHand.Add(cardRepo.GetRandomCard());
-                    Console.WriteLine("Dealer Hand:");
-                    cardRepo.DisplayHand(dealerHand);
-                    Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
+                    Console.WriteLine("Would you like to hit? y/n");
+                    string userInput = Console.ReadLine().ToLower();
 
+                    //Hit 
+                    if (userInput == "y")
+                    {
+                        playerHand.Add(cardRepo.GetRandomCard());
+                        Console.WriteLine("Player Hand:");
+                        cardRepo.DisplayHand(playerHand);
+                        Console.WriteLine("Player Total Points: " + cardRepo.GetTotalPoints(playerHand));
+                        Console.WriteLine("************************************************8");
+                        Console.WriteLine("Dealer Hand:");
+                        cardRepo.DisplayHand(dealerHand);
+                        Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
+                    }
+                    else if (userInput == "n")
+                    {
+
+                        if (cardRepo.GetTotalPoints(dealerHand) < 17)
+                        {
+                            dealerHand.Add(cardRepo.GetRandomCard());
+                            Console.WriteLine("Dealer Hand:");
+                            cardRepo.DisplayHand(dealerHand);
+                            Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
+                        }
+                        else
+                        {
+                            if (cardRepo.GetTotalPoints(dealerHand) < cardRepo.GetTotalPoints(playerHand))
+                            {
+                                Console.WriteLine("Player Wins.");
+                                keepPlaying = false;
+                            }
+                        }
+                        if (cardRepo.GetTotalPoints(dealerHand) > cardRepo.GetTotalPoints(playerHand))
+                        {
+                            Console.WriteLine("Dealer Wins.");
+                            keepPlaying = false;
+                        }
+                    }
+                    if (cardRepo.GetTotalPoints(playerHand) > 21)
+                    {
+                        Console.WriteLine("Player Busts!");
+                        keepPlaying = false;
+                    }
+                    if (cardRepo.GetTotalPoints(dealerHand) > 21)
+                    {
+                        Console.WriteLine("Dealer Busts!");
+                        keepPlaying = false;
+                    }
+                    if (cardRepo.GetTotalPoints(playerHand) == 21 && cardRepo.GetTotalPoints(dealerHand) == 21)
+                    {
+                        Console.WriteLine("It's a Draw");
+                        keepPlaying = false;
+                    }
+                    else if (cardRepo.GetTotalPoints(playerHand) == 21)
+                    {
+                        Console.WriteLine("Congratulations you win!!!");
+                        keepPlaying = false;
+                    }
+                    else if (cardRepo.GetTotalPoints(dealerHand) == 21)
+                    {
+                        Console.WriteLine("Deal HIT Blackjack... You Lose!");
+                        keepPlaying = false;
+                    }
+                    if (cardRepo.GetTotalPoints(dealerHand) == cardRepo.GetTotalPoints(playerHand))
+                    {
+                        Console.WriteLine("It's a draw, busters.");
+                        keepPlaying = false;
+                    }
                 }
             }
             Console.ReadLine();
-
-
-            //prompt user to hit or stay.
-            //deal to dealer if totalPoints < 17.
-            //repeat while totalPoints is not greater than 21.
-
-            //determine winner, print hand totals.
-
-            //List<Card>
-            // deal hands - vars: dealerHand, playerHand
         }
     }
 }

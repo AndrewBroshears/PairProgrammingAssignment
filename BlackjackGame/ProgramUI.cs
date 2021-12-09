@@ -68,8 +68,43 @@ namespace CardGamesUI
             cardRepo.DisplayHand(dealerHand);
             Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
             Console.ReadKey();
-            Console.WriteLine("Would you like to hit? y/n");
-            string userInput = Console.ReadLine();
+            
+            if (cardRepo.GetTotalPoints(playerHand) == 21 && cardRepo.GetTotalPoints(dealerHand) == 21)
+            {
+                Console.WriteLine("It's a Draw");
+            }
+            else if (cardRepo.GetTotalPoints(playerHand) == 21)
+            {
+                Console.WriteLine("Congratulations you win!!!");
+            }
+            else if (cardRepo.GetTotalPoints(dealerHand) == 21)
+            {
+                Console.WriteLine("Deal HIT Blackjack... You Lose!");
+            }
+            else //nobody hit 21 on first draw
+            {
+                Console.WriteLine("Would you like to hit? y/n");
+                string userInput = Console.ReadLine().ToLower();
+
+                //Hit 
+                if (userInput == "y") 
+                {
+                    playerHand.Add(cardRepo.GetRandomCard());
+                    Console.WriteLine("Player Hand:");
+                    cardRepo.DisplayHand(playerHand);
+                    Console.WriteLine("Player Total Points: " + cardRepo.GetTotalPoints(playerHand));
+                }
+                if (cardRepo.GetTotalPoints(dealerHand) < 17)
+                {
+                    dealerHand.Add(cardRepo.GetRandomCard());
+                    Console.WriteLine("Dealer Hand:");
+                    cardRepo.DisplayHand(dealerHand);
+                    Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
+
+                }
+            }
+            Console.ReadLine();
+
 
             //prompt user to hit or stay.
             //deal to dealer if totalPoints < 17.

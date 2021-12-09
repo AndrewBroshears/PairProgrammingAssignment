@@ -10,7 +10,6 @@ namespace PlayCard.Repo
     public class CardRepo
     {
         private readonly List<Card> _deckOfCards = new List<Card>();
-        private int _cardId = 0;
         //CRUD and helper methods on deck of cards.
       
         //Create deck of cards

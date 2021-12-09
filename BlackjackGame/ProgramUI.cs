@@ -40,7 +40,6 @@ namespace CardGamesUI
                     Console.WriteLine("Thank you. Please play again soon.");
                     Console.ReadKey();
                     break;
-
             }
         }
 
@@ -52,13 +51,31 @@ namespace CardGamesUI
             Console.WriteLine("We're going to play the game here. \n" +
                 "Press any key to deal the hands.");
             Console.ReadKey();
-            cardRepo.PrintDeck();
-            Console.ReadLine();
+            //play game
 
-            //initialize players hands:
+            //deal two card to each "hand"
             // playerHand.Add(CardRepo.DealCard());
+            playerHand.Add(cardRepo.GetRandomCard());
+            playerHand.Add(cardRepo.GetRandomCard());
+            dealerHand.Add(cardRepo.GetRandomCard());
+            dealerHand.Add(cardRepo.GetRandomCard());
 
-            
+            //Display results of dealing:
+            Console.WriteLine("Player Hand:");
+            cardRepo.DisplayHand(playerHand);
+            Console.WriteLine("Player Total Points: " + cardRepo.GetTotalPoints(playerHand));
+            Console.WriteLine("Dealer Hand:");
+            cardRepo.DisplayHand(dealerHand);
+            Console.WriteLine("Dealer Total Points: " + cardRepo.GetTotalPoints(dealerHand));
+            Console.ReadKey();
+            Console.WriteLine("Would you like to hit? y/n");
+            string userInput = Console.ReadLine();
+
+            //prompt user to hit or stay.
+            //deal to dealer if totalPoints < 17.
+            //repeat while totalPoints is not greater than 21.
+
+            //determine winner, print hand totals.
 
             //List<Card>
             // deal hands - vars: dealerHand, playerHand
